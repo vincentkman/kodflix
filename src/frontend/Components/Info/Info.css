@@ -1,0 +1,90 @@
+
+.Info h1 {
+    letter-spacing: 5px;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    animation: text 3s 1;
+}
+
+.info-image, .textbox, .text, .home-button {
+    animation: fadeOut 3s;
+}
+
+.info-image {
+    width: 400px;
+    height: 600px;
+    transition: all .9s;
+    box-shadow: 13px 12px 15px 5px rgba(0,0,0,.3);
+    border-radius: 5px;
+    margin: 50px 100px 0 0;
+}
+
+.content {
+    display: flex;
+    margin: -20px 20px 30px 20px;
+}
+
+.textbox {
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    position: relative;
+    padding: 30px;
+    box-shadow: 13px 12px 15px 5px rgba(0,0,0,.3);
+    margin-right: 120px;
+}
+
+.text {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    top: 10%
+}
+
+
+.home-button {
+    background-color: black;
+    text-transform: uppercase;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    text-decoration: none;
+    transition: all .6s;
+    color: white;
+    text-align: center;
+}
+
+.home-button:hover {
+    opacity: .5;
+}
+
+@media (max-width: 600px) {
+    .Info .content {
+        flex-direction: column;
+    }
+
+    .info-image {
+        width: 300px;
+        height: 600px;
+        margin: -50px auto 50px auto;
+    }
+
+    .text {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .textbox {
+        width: 400px;
+        height: 80px;
+        margin-top: 30px;
+    }
+}

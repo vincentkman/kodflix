@@ -1,0 +1,52 @@
+body {
+  background-color: #F0F0F0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App .film-title {
+  color: white;
+}
+
+.App .film-title:hover, .overlay:hover {
+  animation: text2 3s 1;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 5px;
+}
+
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .9s;
+  animation: fadeOut 8s;
+}
+
+.item:hover .overlay {
+  background: rgba(0, 0, 0, .5);
+  top: 0;
+}
+
+.mainImg { 
+  width: 100%;
+  height: 100%;
+  display: block;
+  animation: fadeOut 3s;
+}
+
+
+
+
