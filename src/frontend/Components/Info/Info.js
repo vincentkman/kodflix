@@ -18,13 +18,13 @@ export default class Info extends Component {
     fetch('/rest/shows')
       .then(res => res.json())
       .then(shows => { 
-        console.log(shows);
-        // this.setState({ shows })
-        // let filmId = this.props.match.params.filmId;
+        // console.log(shows);
+        this.setState({ shows })
+        let filmId = this.props.match.params.filmId;
   
-        // let film = shows
-        //     .find((film) => film.id === filmId);
-        // this.setState({ film });
+        let film = shows
+            .find((film) => film.id === filmId);
+        this.setState({ film });
       }).catch(error => console.log(error));
       
    
