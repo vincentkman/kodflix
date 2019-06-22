@@ -1,5 +1,6 @@
 import React from 'react';
 import FilmCollections from './FilmCollections';
+import Loading from './Loading/Loading';
 
 export default class Films extends React.Component {
   constructor() {
@@ -15,6 +16,10 @@ export default class Films extends React.Component {
 
   render() {
     let films = this.state.filmsData;
+    
+    if(!films) {
+      return <Loading />;
+    }
     return (
       <div className='container'>{
         films.map(film => (
@@ -29,8 +34,6 @@ export default class Films extends React.Component {
       }</div>
     );
   }
-
-
 }
 
 

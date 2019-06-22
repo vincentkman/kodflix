@@ -1,12 +1,12 @@
 
-.container {
+.load-container {
     display: flex;
-    /* height: 100%; */
 }
 
 .loader {
     justify-self: center;
-    margin: 30% auto;
+    align-self: center;
+    margin: 50% auto;
     border: 16px solid #f3f3f3;
     border-radius: 50%;
     border-top: 16px solid #3498db;

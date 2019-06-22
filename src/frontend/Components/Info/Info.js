@@ -31,7 +31,7 @@ export default class Info extends Component {
       if(film) {
          return film.id ?
           <InfoContent film = {film} /> :
-          <Loading/>
+          <Loading />
       } else {
         return <Redirect to='/not-found' />;
       }
