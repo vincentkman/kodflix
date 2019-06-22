@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 3001;
-const getShows = require('./shows');
+const getFilms = require('./filmShows');
 
 // Add route -> request and response
-app.get('/rest/shows', (req, res) => res.send(getShows()));
+app.get('/rest/filmShows', (req, res) => res.send(getFilms()));
 
 app.listen(port, () => console.log(`Server started on port ${port}!`));
 

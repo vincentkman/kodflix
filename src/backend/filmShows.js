@@ -1,9 +1,9 @@
-let getShows = function() {
+let getFilms = function() {
     return [
         { id: 'batman', title: 'The Dark Knight', synopsis: `When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham. The Dark Knight must accept one of the greatest psychological and physical tests of his ability to fight injustice.` },
         { id: 'inception', title: 'Inception', synopsis: `A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.` },
         { id: 'jurassicpark', title: 'Jurassic Park', synopsis: `During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.` },
-        { id: 'thelordoftheRings', title: 'The Lord Of The Rings', synopsis: `A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.` },
+        { id: 'lordoftherings', title: 'The Lord Of The Rings', synopsis: `A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.` },
         { id: 'matrix', title: 'The Matrix', synopsis: `The lives of two mob hitmen, a boxer, a gangster & his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.` },
         { id: 'pulpfiction', title: 'Pulp Fiction', synopsis: `The lives of two mob hitmen, a boxer, a gangster & his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.` },
         { id: 'thelastsamurai', title: 'The Last Samurai', synopsis: `In Japan, Civil War veteran Captain Nathan Algren trains the Emperor's troops to use modern weapons as they prepare to defeat the last of the country's samurais. But Algren's passion is swayed when he is captured by the samurai and learns about their traditions and code of honor.` },
@@ -13,15 +13,4 @@ let getShows = function() {
     ];
 }
 
-module.exports = getShows;
-
-// filmImage: batman,
-// filmImage: inception,
-// filmImage: jurassicPark,
-// filmImage: lordOfTheRings,
-// filmImage: matrix, 
-// filmImage: pulpFiction, 
-// filmImage: lastSamurai,
-// filmImage: toyStory,
-// filmImage: homeAlone,
-// filmImage: trainingDay, 
+module.exports = getFilms;
