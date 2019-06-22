@@ -13,7 +13,7 @@ export default class Info extends Component {
 
   componentDidMount() {
     let filmId = this.props.match.params.filmId;
-    fetch(`/rest/filmShows/${filmId}`)
+    fetch(`/rest/filmshows/${filmId}`)
       .then(res => res.json())
       .then(filmShows => { this.setState({ filmShows })
         
@@ -38,7 +38,19 @@ export default class Info extends Component {
     }
   }
 
+  // render() {
+  //   let film = this.state.film;
+
+  //     if(film) {
+  //        return <InfoContent film = {film} />
+  //     } else {
+  //       return <Redirect to='/not-found' />;
+  //     }
+  //   }
+  // }
+
 function InfoContent({ film }) {
+  let url = require(`../../common/images/coverImages/${film.id}.jpg`);
   return (
       <div className='Info'>
       <h1>{film.title}</h1>
@@ -47,7 +59,7 @@ function InfoContent({ film }) {
         {film.synopsis}</p></div>
         <img
           className='info-image' 
-          src={require(`../../common/images/coverImages/${film.id}.jpg`)}
+          src={url}
           alt={film.title}/>  
       </div>
       <div className='button'>

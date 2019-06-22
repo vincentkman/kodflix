@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "express": "^4.17.1",
+    "mongodb": "^3.2.7",
     "nodemon": "^1.19.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -11,13 +12,14 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm-run-all -s build start-backend",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start-front-end": "react-scripts start",
+    "start-frontend": "react-scripts start",
     "start-backend": "nodemon src/backend/app.js",
-    "start-dev": "npm-run-all -p start-frontend start-backend"
+    "start-db": "mongod",
+    "start-dev": "npm-run-all -p start-db start-backend start-frontend"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -9,7 +9,7 @@ export default class Films extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/rest/filmShows') 
+    fetch('/rest/filmshows') 
       .then(res => res.json())
       .then(filmsData => this.setState( { filmsData } ))
   }
