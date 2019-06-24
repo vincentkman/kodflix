@@ -19,7 +19,7 @@
     "start-frontend": "react-scripts start",
     "start-backend": "nodemon src/backend/app.js",
     "start-db": "mongod",
-    "start-dev": "npm-run-all -p start-backend start-frontend"
+    "start-dev": "npm-run-all -p start-db start-backend start-frontend"
   },
   "eslintConfig": {
     "extends": "react-app"
