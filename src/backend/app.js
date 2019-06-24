@@ -13,6 +13,13 @@ db.connect().then(dbo => {
         });
     });
 
+    app.get('/rest/filmshows/:blah', (req, res) => {
+        dbo.collection('filmshows').findOne({id : req.params.blah}, (err, result) => {
+            if(err) throw(err);
+            res.send(result);
+        });
+    });
+
     app.listen(port, () => console.log(`Server started on port ${port}!`));
 
     // Serve any static files
