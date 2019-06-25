@@ -5,7 +5,7 @@ import Info from './Components/Info/Info';
 import NotFound from './Components/Not-Found/Not-Found';
  
 import './App.css';
-import './KeyFrames.css';
+import './KeyFrames.scss';
 
 export default class App extends React.Component {
   render() {
