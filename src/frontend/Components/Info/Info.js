@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import './Info.css';
-import '../../KeyFrames.css';
+import './Info.scss';
+import '../../KeyFrames.scss';
 import Loading from '../Loading/Loading';
 
 export default class Info extends Component {
