@@ -1,6 +1,6 @@
 import React from 'react';
-import './Loading.css';
-import '../../KeyFrames.css';
+import './Loading.scss';
+import '../../KeyFrames.scss';
 
 export default function Loading() {
     return (
