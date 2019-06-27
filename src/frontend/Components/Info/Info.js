@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import './Info.scss';
-import '../../KeyFrames.scss';
 import Loading from '../Loading/Loading';
+
+import './Info.scss';
+
+// import '../../Utilities/KeyFrames.scss';
+// import '../../Utilities/Mixins.scss'; 
+// import '../../Utilities/Variables.scss';
+// import '../../Utilities/Extends.scss';
 
 export default class Info extends Component {
 
@@ -15,10 +20,10 @@ export default class Info extends Component {
     let filmId = this.props.match.params.filmId;
     fetch(`/rest/filmshows/${filmId}`)
       .then(res => res.json())
-      .then(film => {
-
-        this.setState({ film });
-      }).catch(error => console.log(error));
+      .then(film => 
+        { this.setState({ film });
+      })
+      .catch(error => console.log(error));
     }
 
   render() {

@@ -1,13 +1,60 @@
+@import '../../Utilities/Mixins.scss'; 
+@import '../../Utilities/Variables.scss';
+@import '../../Utilities/Extends.scss';
+
 .Info {
     height: 100%;
+
+    h1 {
+        letter-spacing: $letter-space;
+        font-size: $base__font-size;
+        font-weight: $font-weight--bold;
+        text-transform: uppercase;
+        animation: text 3s 1;
+    }
+    
+    .content {
+        @extend %center;
+        @include flexbox($dir: column);
+        @include mq('medium') {
+            @include flexbox($dir: row);
+            margin: 0 50%;
+        }
+    }
 }
 
-.Info h1 {
-    letter-spacing: 5px;
-    font-size: 40px;
-    font-weight: 600;
-    text-transform: uppercase;
-    animation: text 3s 1;
+.text {
+    font-size: 16px;
+    text-align: center;
+    color: $white;
+    font-weight: $font-weight--bold;
+    @include rpos($top: 10%);
+    @include mq('medium') {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+}
+
+.textbox {
+    @include dim($w: 400px, $h: 150px);
+    @extend %box-shadow;
+    flex-shrink: 0;
+    background: $light-black;
+    margin: 100px auto;
+    margin-top: 30px;
+    border-radius: $br--default;
+    position: relative;
+    padding: 30px;
+    @include mq('medium') {
+        @include dim($w: 220px, $h: 300px);
+            margin-right: 50px;
+        @include mq('large') {
+            @include dim($w: 300px, $h: 300px);
+            margin-right: 120px;
+        }
+    }
 }
 
 .info-image, .textbox, .text, .home-button {
@@ -15,79 +62,37 @@
 }
 
 .info-image {
-    width: 400px;
-    height: 600px;
+    @include dim($w: 400px, $h: 600px);
+    @extend %box-shadow;
+    border-radius: $br--default;
+    margin: -50px auto 50px auto;
     transition: all .9s;
-    box-shadow: 13px 12px 15px 5px rgba(0,0,0,.3);
-    border-radius: 5px;
-    margin: 50px 100px 0 0;
+    @include mq('medium') {
+        margin: 50px 50px 0 0;
+    }
+    &:hover {
+        @extend %mouseover;
+    }
 }
 
-.content {
-    display: flex;
-    margin: -20px 20px 30px 20px;
+.button {
+    margin-top: 50px;
+    @include mq('medium') {
+        @include apos($top: 800px, $right: 50%);
+    }
 }
-
-.textbox {
-    flex-shrink: 0;
-    width: 300px;
-    height: 300px;
-    margin: 100px auto;
-    background: rgba(0, 0, 0, .5);
-    border-radius: 5px;
-    position: relative;
-    padding: 30px;
-    box-shadow: 13px 12px 15px 5px rgba(0,0,0,.3);
-    margin-right: 120px;
-}
-
-.text {
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: center;
-    position: relative;
-    top: 10%
-}
-
 
 .home-button {
-    background-color: black;
-    text-transform: uppercase;
+    background-color: $black;
     font-size: 20px;
-    border-radius: 5px;
-    padding: 20px;
-    text-decoration: none;
-    transition: all .6s;
-    color: white;
+    color: $white;
     text-align: center;
-}
-
-.home-button:hover {
-    opacity: .5;
-}
-
-@media (max-width: 600px) {
-    .Info .content {
-        flex-direction: column;
-    }
-
-    .info-image {
-        width: 300px;
-        height: 600px;
-        margin: -50px auto 50px auto;
-    }
-
-    .text {
-        font-size: 13px;
-        text-align: center;
-    }
-
-    .textbox {
-        width: 400px;
-        height: 80px;
-        margin-top: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: $br--default;
+    padding: 20px;
+    transition: all .6s;
+    &:hover {
+        opacity: .5;
     }
 }

@@ -6,21 +6,19 @@ const port = process.env.PORT || 3001;
 
 db.connect().then(dbo => {
         // Add route -> request and response
-    app.get('/rest/filmshows', (req, res) => {
+    app.get('/rest/filmshows/', (req, res) => {
         dbo.collection('filmshows').find({}).toArray((err, result) => {
             if(err) throw(err);
             res.send(result);
         });
     });
 
-    app.get('/rest/filmshows/:blah', (req, res) => {
-        dbo.collection('filmshows').findOne({id : req.params.blah}, (err, result) => {
+    app.get('/rest/filmshows/:id', (req, res) => {
+        dbo.collection('filmshows').findOne({id : req.params.id}, (err, result) => {
             if(err) throw(err);
             res.send(result);
         });
     });
-
-    app.listen(port, () => console.log(`Server started on port ${port}!`));
 
     // Serve any static files
     app.use(express.static(path.join(__dirname, '../../build')));
@@ -30,3 +28,4 @@ db.connect().then(dbo => {
     });
 });
 
+app.listen(port, () => console.log(`Server started on port ${port}!`));

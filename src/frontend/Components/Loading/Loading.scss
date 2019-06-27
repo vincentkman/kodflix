@@ -1,6 +1,8 @@
 
+@import '../../Utilities/Mixins.scss';
+
 .load-container {
-    display: flex;
+    @include flexbox();
 }
 
 .loader {
