@@ -1,22 +1,28 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { withRouter, Route, Switch } from 'react-router-dom';
 import Films from './Components/Gallery/Films';
 import Info from './Components/Info/Info';
 import NotFound from './Components/Not-Found/Not-Found';
 
 import ReactGA from 'react-ga';
-// ReactGA.initialize('UA-000000-01');
-// ReactGA.pageview(window.location.pathname + window.location.search);
+
  
 import './App.scss';
 // import './Utilities/KeyFrames.scss';
 // import './Utilities/Mixins.scss'; 
 // import './Utilities/Variables.scss';
 
-export default class App extends React.Component {
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    ReactGA.initialize('UA-143239330-1');
+    ReactGA.pageview(props.location.pathname + props.location.search);
+    props.history.listen((location) => {
+      ReactGA.pageview(location.pathname + location.search);  
+    });
+  }
   render() {
     return (
-      <Router>
         <div className="App">
           <Switch>
             <Route exact path='/' component={Films} />
@@ -24,7 +30,8 @@ export default class App extends React.Component {
             <Route exact path='/:filmId' component={Info} />
           </Switch>
         </div>
-      </Router> 
     );
   }
 }
+
+export default withRouter(App);
