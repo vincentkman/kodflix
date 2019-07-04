@@ -1,7 +1,7 @@
 import React from 'react';
 import './Loading.scss';
 // import '../KeyFrames.scss';
-import '/Users/vincentman/Desktop/kodflix/src/frontend/Utilities/KeyFrames.scss';
+import '../../Utilities/KeyFrames.scss';
 
 export default function Loading() {
     return (

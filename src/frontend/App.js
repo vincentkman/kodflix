@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Films from './Components/Gallery/Films';
 import Info from './Components/Info/Info';
 import NotFound from './Components/Not-Found/Not-Found';
+
+import ReactGA from 'react-ga';
+// ReactGA.initialize('UA-000000-01');
+// ReactGA.pageview(window.location.pathname + window.location.search);
  
 import './App.scss';
 // import './Utilities/KeyFrames.scss';
