@@ -3,8 +3,9 @@ import { withRouter, Route, Switch } from 'react-router-dom';
 import Films from './Components/Gallery/Films';
 import Info from './Components/Info/Info';
 import NotFound from './Components/Not-Found/Not-Found';
-
 import ReactGA from 'react-ga';
+
+import Menu from './Components/Menu/Menu';
 
  
 import './App.scss';
@@ -21,6 +22,7 @@ class App extends React.Component {
   render() {
     return (
         <div className="App">
+          <Menu/>
           <Switch>
             <Route exact path='/' component={Films} />
             <Route exact path='./Not-Found' component={NotFound}/>
