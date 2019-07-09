@@ -8,9 +8,6 @@ import ReactGA from 'react-ga';
 
  
 import './App.scss';
-// import './Utilities/KeyFrames.scss';
-// import './Utilities/Mixins.scss'; 
-// import './Utilities/Variables.scss';
 
 class App extends React.Component {
   constructor(props) {

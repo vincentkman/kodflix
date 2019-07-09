@@ -62,7 +62,7 @@
 }
 
 .info-image {
-    @include dim($w: 400px, $h: 600px);
+    width: 400px;
     @extend %box-shadow;
     border-radius: $br--default;
     margin: -50px auto 50px auto;
