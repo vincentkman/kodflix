@@ -14,9 +14,14 @@ db.connect().then(dbo => {
     });
 
     app.get('/rest/filmshows/:id', (req, res) => {
-        dbo.collection('filmshows').findOne({id : req.params.id}, (err, result) => {
+        const iD = req.params.id;
+        dbo.collection('filmshows').findOne({id : iD}, (err, result) => {
             if(err) throw(err);
-            res.send(result);
+            if(!result) {
+                res.status(404).send({});
+            } else {
+                res.send(result);
+            }
         });
     });
 
