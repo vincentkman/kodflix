@@ -4,11 +4,6 @@ import Loading from '../Loading/Loading';
 
 import './Info.scss';
 
-// import '../../Utilities/KeyFrames.scss';
-// import '../../Utilities/Mixins.scss'; 
-// import '../../Utilities/Variables.scss';
-// import '../../Utilities/Extends.scss';
-
 export default class Info extends Component {
 
     constructor() {
